@@ -19,7 +19,7 @@ struct Args {
     idea_comm: bool,
     #[arg(short, long)]
     webstorm: bool,
-    #[arg(short, long, default_value_t=(".".to_string()))]
+    #[arg(short, long, default_value_t=("".to_string()))]
     path: String
 
 }
@@ -36,23 +36,23 @@ fn main() {
     let args = Args::parse();
     if args.clion {
 
-        println!("clion detected");
+        println!("starting clion...");
         open_ide("clion.cmd", &args.path);
     }
     if args.idea {
-        println!("idea detected");
+        println!("starting idea...");
         open_ide("idea.cmd", &args.path);
     }
     if args.fleet {
-        println!("fleet detected");
+        println!("starting fleet...");
         open_ide("fleet.cmd", &args.path);
     }
     if args.idea_comm {
-        println!("idea_comm detected");
+        println!("starting idea community...");
         open_ide("idea_comm.cmd", &args.path);
     }
     if args.webstorm {
-        println!("webstrm detected");
+        println!("starting webstorm...");
         open_ide("webstorm.cmd", &args.path);
     }
 
