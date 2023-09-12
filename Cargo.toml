@@ -1,6 +1,6 @@
 [package]
 name = "mmi-code"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 repository = "https://github.com/Carter907/mmi-code"
 readme = "README.md"
