@@ -3,7 +3,7 @@ name = "mmi-code"
 version = "0.1.0"
 edition = "2021"
 repository = "github.com/Carter907/mmi-code"
-readme = "an jetbrains terminal tool for easily running your code in popular IDEs."
+readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
