@@ -2,7 +2,7 @@
 name = "mmi-code"
 version = "0.1.0"
 edition = "2021"
-repository = "github.com/Carter907/mmi-code"
+repository = "https://github.com/Carter907/mmi-code"
 readme = "README.md"
 description = "a terminal tool for windows users that allows for easy applicaiton startup of popular IDEs from the command line"
 license = "MIT"
