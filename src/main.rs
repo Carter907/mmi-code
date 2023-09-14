@@ -20,7 +20,9 @@ struct Args {
     #[arg(short, long)]
     webstorm: bool,
     #[arg(short, long, default_value_t=("".to_string()))]
-    path: String
+    path: String,
+    #[arg(short,long)]
+    rust_rover: bool,
 
 }
 
@@ -31,6 +33,7 @@ fn main() {
     include_bytes!("../scripts/idea.cmd");
     include_bytes!("../scripts/idea_comm.cmd");
     include_bytes!("../scripts/webstorm.cmd");
+    include_bytes!("../scripts/rustrover.cmd");
 
 
     let args = Args::parse();
@@ -55,6 +58,10 @@ fn main() {
         println!("starting webstorm...");
         open_ide("webstorm.cmd", &args.path);
     }
+    if args.rust_rover {
+        println!("starting rust rover...");
+        open_ide("rustrover.cmd", &args.path);
+    }
 
 }
 
@@ -66,5 +73,5 @@ fn open_ide(program: &str, path: &String) {
         .arg(program)
         .arg(path)
         .output()
-        .expect("failed to launch clion");
+        .expect("failed to launch ide");
 }
